@@ -1,4 +1,4 @@
-![Logo](https://drive.google.com/file/d/1HFaBLblOQmYvnGzGYz7GU57f_1IscsPT/view?usp=sharing)
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 # 🚀 PyAIStatus
 
@@ -6,7 +6,7 @@ PyAIStatus is a **cutting-edge evaluation and reporting library** designed to st
 
 Built with **clarity**, **reproducibility**, and **rigor** in mind, PyAIStatus transforms the typically fragmented evaluation process into a **single-command solution** that delivers a comprehensive interactive report (`report.html`) 📊 packed with actionable insights.
 
-## Visit : http://whimsical-cocada-c981cb.netlify.app
+---
 
 ## ✨ Key Highlights
 
