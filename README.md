@@ -33,6 +33,18 @@ Built with **clarity**, **reproducibility**, and **rigor** in mind, PyAIStatus t
   python scripts/evaluate_model.py models/Dogs-vs-Cats_model.h5 data/cats_and_dogs_dataset/train evaluation_results
 ```
 
+## Requirements
+
+-tensorflow>=2.9,<2.10
+-scikit-learn
+-pandas
+-matplotlib
+-seaborn
+-numpy<2.0
+-opencv-python-headless
+-tqdm
+-tf-keras-vis
+
 ## Usage - Quick Run (.py file/.ipynb file)
 
 1.Open the code file where you wanna use the PyAIStatus
