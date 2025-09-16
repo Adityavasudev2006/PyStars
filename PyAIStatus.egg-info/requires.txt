@@ -1,0 +1,9 @@
+tensorflow<2.10,>=2.8
+scikit-learn
+pandas
+matplotlib
+seaborn
+numpy<2.0
+opencv-python
+tqdm
+tf-keras-vis

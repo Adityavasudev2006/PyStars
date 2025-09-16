@@ -1,0 +1,28 @@
+# Python cache & environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env
+
+# IDE
+.vscode/
+.idea/
+
+# Data / models
+*.h5
+*.pkl
+*.csv
+*.json
+*.parquet
+*.db
+*.sqlite
+*.zip
+*.tar
+*.gz
+
+# Logs
+*.log

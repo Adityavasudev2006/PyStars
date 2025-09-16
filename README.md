@@ -1,0 +1,47 @@
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+
+# PyAIStatus
+
+PyAIStatus is a cutting-edge evaluation and reporting library designed to streamline the complete lifecycle of model assessment in machine learning competitions, research, and enterprise deployments. Built with clarity, reproducibility, and rigor in mind, PyAIStatus transforms the typically fragmented evaluation process into a single-command solution that delivers a comprehensive interactive report (report.html) packed with actionable insights.
+
+Key Highlights
+
+✅ Plug-and-Play Evaluation – Run the entire evaluation pipeline with one function call.
+
+✅ Reproducibility First – Captures environment details, seeds, and library versions for exact replication.
+
+✅ Rich Analytics – Generates all required KPIs (Accuracy, F1, ROC AUC, PR AUC, Calibration, Brier score, etc.) with confidence intervals.
+
+✅ Visual Explanations – Produces confusion matrices, ROC/PR curves, calibration plots, robustness degradation charts, and explainability heatmaps (Grad-CAM, Integrated Gradients).
+
+✅ Robustness & Reliability – Evaluates models under Gaussian noise, blur, occlusion, and compression to assess real-world resilience.
+
+✅ Statistical Rigor – Performs baseline comparisons, bootstrapped confidence intervals, and statistical significance testing.
+
+✅ Efficiency Insights – Reports model size, parameter count, inference time, and memory usage, enabling deployment-ready evaluations.
+
+✅ Automated Reporting – Delivers a polished, self-contained HTML report for stakeholders to review instantly—no extra steps required.
+
+## Installation
+
+1.Clone the Repo to local system  
+2.Type the following commands to run the library:  
+ -pip install -e .  
+ -python scripts/evaluate_model.py "./models/model_name.h5" "./data/dataset_name/train" "./evaluation_results"
+
+```bash
+  pip install -e .
+  python scripts/evaluate_model.py models/Dogs-vs-Cats_model.h5 data/cats_and_dogs_dataset/train evaluation_results
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Badges
+
+Add badges from somewhere like: [shields.io](https://shields.io/)
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
