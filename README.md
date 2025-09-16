@@ -21,7 +21,7 @@ Built with **clarity**, **reproducibility**, and **rigor** in mind, PyAIStatus t
 
 ---
 
-## Installation
+## 📦 Installation
 
 1.Clone the Repo to local system  
 2.Type the following commands to run the library:  
@@ -33,7 +33,7 @@ Built with **clarity**, **reproducibility**, and **rigor** in mind, PyAIStatus t
   python scripts/evaluate_model.py models/Dogs-vs-Cats_model.h5 data/cats_and_dogs_dataset/train evaluation_results
 ```
 
-## Requirements
+## 📝 Requirements
 
 -tensorflow>=2.9,<2.10
 
@@ -53,7 +53,7 @@ Built with **clarity**, **reproducibility**, and **rigor** in mind, PyAIStatus t
 
 -tf-keras-vis
 
-## Usage - Quick Run (.py file/.ipynb file)
+## 🚀 Usage - Quick Run (.py file/.ipynb file)
 
 1.Open the code file where you wanna use the PyAIStatus
 2.Import the PyAIStatus library and use the functions in the code (.py or .ipynb)
@@ -81,11 +81,11 @@ else:
     )
 ```
 
-## License
+## 📜 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Badges
+## 🏷️ Badges
 
 Add badges from somewhere like: [shields.io](https://shields.io/)
 
