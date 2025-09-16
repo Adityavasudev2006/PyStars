@@ -34,6 +34,34 @@ Key Highlights
   python scripts/evaluate_model.py models/Dogs-vs-Cats_model.h5 data/cats_and_dogs_dataset/train evaluation_results
 ```
 
+## Installation
+
+1.Open the code file where you wanna use the PyAIStatus
+2.Import the PyAIStatus library and use the functions in the code (.py or .ipynb)
+3.Example:
+
+```bash
+  # code.py
+
+import os
+from PyAIStatus import evaluate
+
+model_location = os.path.join("models", "Dogs-vs-Cats_model.h5")
+data_location = os.path.join("data", "cats_and_dogs_dataset", "train")
+output_location = os.path.join("evaluation_results")
+
+if not os.path.exists(model_location):
+    print(f"Error: Model file not found at '{model_location}'")
+elif not os.path.exists(data_location):
+    print(f"Error: Dataset directory not found at '{data_location}'")
+else:
+    evaluate(
+        model_path=model_location,
+        dataset_dir=data_location,
+        output_dir=output_location
+    )
+```
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

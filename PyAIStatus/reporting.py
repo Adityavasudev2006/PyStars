@@ -30,18 +30,153 @@ def generate_html_report(data: dict, output_dir: str):
     <head>
         <title>Model Evaluation Report</title>
         <style>
-            body {{ font-family: sans-serif; margin: 40px; color: #333; }}
-            .container {{ max-width: 960px; margin: auto; }}
-            h1 {{ color: #1a1a1a; text-align: center; }}
-            h2 {{ color: #333; border-bottom: 2px solid #f2f2f2; padding-bottom: 10px; }}
-            table {{ width: 100%; border-collapse: collapse; margin-bottom: 30px; }}
-            th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
-            th {{ background-color: #f2f2f2; }}
-            tr:nth-child(even) {{ background-color: #f9f9f9; }}
-            .plot-container {{ text-align: center; margin: 20px 0; }}
-            .plot-container img {{ max-width: 80%; height: auto; border: 1px solid #ddd; }}
-            .summary-text {{ background-color: #eef; padding: 15px; border-left: 5px solid #66d; }}
-            pre {{ background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd; white-space: pre-wrap; }}
+            /* --- CSS Variables for Easy Theme Customization --- */
+            :root {{
+                --bg-color: #1a1f2c; /* Deep space blue */
+                --card-bg-color: #2c3a47; /* Slightly lighter card blue */
+                --accent-color: #00aeff; /* Electric blue accent */
+                --primary-text-color: #f0f4f8; /* Off-white for readability */
+                --secondary-text-color: #a0b1c2; /* Lighter blue/grey for subtitles */
+                --border-color: #3b4a5a; /* Subtle border for tables and plots */
+                --shadow-color: rgba(0, 0, 0, 0.4);
+                --hover-color: #34495e; /* Row hover color */
+            }}
+
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Fira+Code&display=swap');
+
+            /* --- Base & Animation --- */
+            body {{
+                background-color: var(--bg-color);
+                color: var(--primary-text-color);
+                font-family: 'Roboto', sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 40px;
+                animation: fadeInAnimation 1s ease-out forwards;
+                opacity: 0;
+            }}
+
+            @keyframes fadeInAnimation {{
+                from {{
+                    opacity: 0;
+                    transform: translateY(20px);
+                }}
+                to {{
+                    opacity: 1;
+                    transform: translateY(0);
+                }}
+            }}
+
+            .container {{
+                max-width: 960px;
+                margin: auto;
+            }}
+
+            /* --- Typography --- */
+            h1 {
+    color: var(--accent-color); /* Use the bright blue accent color */
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.8em; /* Slightly larger */
+    letter-spacing: 1px; /* Less spacing for a more solid look */
+    margin-bottom: 40px;
+    text-transform: uppercase; /* A professional touch */
+}
+
+            h2 {{
+                color: var(--primary-text-color);
+                border-bottom: 2px solid var(--accent-color);
+                padding-bottom: 10px;
+                margin-top: 50px;
+                font-weight: 700;
+            }}
+            
+            h3 {{
+                color: var(--secondary-text-color);
+                margin-top: 30px;
+                border-left: 3px solid var(--accent-color);
+                padding-left: 10px;
+            }}
+            
+            h4 {{
+                 color: var(--secondary-text-color);
+            }}
+
+            /* --- Tables --- */
+            table {{
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 30px;
+                background-color: var(--card-bg-color);
+                border-radius: 8px;
+                overflow: hidden; /* For border-radius to work on tables */
+                box-shadow: 0 4px 15px var(--shadow-color);
+            }}
+
+            th, td {{
+                border: none;
+                border-bottom: 1px solid var(--border-color);
+                padding: 12px 15px;
+                text-align: left;
+            }}
+
+            th {{
+                background-color: var(--accent-color);
+                color: #ffffff;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }}
+            
+            tr {{
+                transition: all 0.2s ease-in-out;
+            }}
+            
+            tr:hover {{
+                background-color: var(--hover-color);
+                transform: scale(1.02); /* Subtle lift effect */
+            }}
+
+            tr:last-child td {{
+                border-bottom: none;
+            }}
+
+            /* --- Plots & Special Sections --- */
+            .plot-container {{
+                text-align: center;
+                margin: 40px 0;
+                padding: 20px;
+                background-color: var(--card-bg-color);
+                border-radius: 8px;
+                box-shadow: 0 4px 15px var(--shadow-color);
+            }}
+
+            .plot-container img {{
+                max-width: 80%;
+                height: auto;
+                border: 1px solid var(--border-color);
+                border-radius: 4px;
+            }}
+
+            .summary-text {{
+                background-color: var(--card-bg-color);
+                padding: 20px;
+                border-left: 5px solid var(--accent-color);
+                box-shadow: 0 4px 15px var(--shadow-color);
+                border-radius: 0 8px 8px 0;
+                font-size: 1.1em;
+            }}
+
+            pre {{
+                background-color: var(--bg-color);
+                padding: 15px;
+                border: 1px solid var(--border-color);
+                border-radius: 4px;
+                white-space: pre-wrap;
+                word-break: break-all;
+                font-family: 'Fira Code', monospace;
+                color: var(--secondary-text-color);
+            }}
         </style>
     </head>
     <body>
@@ -57,35 +192,25 @@ def generate_html_report(data: dict, output_dir: str):
             {primary_metrics_table}
             <h3>Per-Class Metrics</h3>
             {per_class_metrics_table}
-
-            <h2>5. Performance Plots</h2>
+            <h2>5. Statistical Reporting</h2>
+            {statistical_table}
+            <h2>6. Performance Plots</h2>
             <div class='plot-container'><h3>Confusion Matrix</h3><img src='{cm_plot}'></div>
             <div class='plot-container'><h3>ROC Curves</h3><img src='{roc_plot}'></div>
             <div class='plot-container'><h3>Precision-Recall Curves</h3><img src='{pr_plot}'></div>
-            
-            <h2>6. Baseline Comparison</h2>
+            <h2>7. Baseline Comparison</h2>
             {baseline_table}
-            
-            <h2>7. Calibration</h2>
+            <h2>8. Calibration</h2>
             {calibration_table}
             <div class='plot-container'><h3>Calibration Curve</h3><img src='{cal_plot}'></div>
-            
-            <h2>8. Robustness Tests</h2>
+            <h2>9. Robustness Tests</h2>
             {robustness_table}
-
-            <h2>9. Statistical Reporting</h2>
-            {statistical_table}
-            
             <h2>10. Explainability</h2>
             {explainability_section}
-            
             <h2>11. Efficiency Metrics</h2>
             {efficiency_table}
-            
-             <!-- FINAL EXPANDED SECTIONS -->
             <h2>12. Written Summary and Interpretation</h2>
             <div class='summary-text'>{written_summary}</div>
-            
             <h2>13. Notes, Limitations, and Reproducibility</h2>
             {notes_and_reproducibility_section}
         </div>

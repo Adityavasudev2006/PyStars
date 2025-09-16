@@ -1,0 +1,16 @@
+# --- Main Application Dependencies ---
+# (Mirrors the list in pyproject.toml for consistent development)
+tensorflow>=2.9,<2.10
+scikit-learn
+pandas
+matplotlib
+seaborn
+numpy<2.0
+opencv-python-headless
+tqdm
+tf-keras-vis
+
+# --- Tools for Building and Publishing the Package ---
+setuptools>=61.0
+wheel
+twine

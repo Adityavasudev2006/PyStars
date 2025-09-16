@@ -1,5 +1,7 @@
+LICENSE
 README.md
 pyproject.toml
+setup.py
 PyAIStatus/__init__.py
 PyAIStatus/baseline.py
 PyAIStatus/data.py

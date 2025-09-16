@@ -6,24 +6,36 @@ build-backend = "setuptools.build_meta"
 name = "PyAIStatus"
 version = "0.1.0"
 authors = [
-  { name="Your Name", email="your.email@example.com" },
+  { name="Aditya Vasudev K", email="adityavasudevk@gmail.com" },
 ]
-description = "A Python library for comprehensive AI model evaluation."
+description = "A comprehensive framework for AI model evaluation and reporting."
 readme = "README.md"
-requires-python = ">=3.8, <3.10"
+requires-python = ">=3.9"
 classifiers = [
+    "Development Status :: 4 - Beta",
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    "tensorflow>=2.8,<2.10",
+    "tensorflow>=2.9,<2.10",
     "scikit-learn",
     "pandas",
     "matplotlib",
     "seaborn",
     "numpy<2.0",
-    "opencv-python",
+    "opencv-python-headless",
     "tqdm",
-    "tf-keras-vis", 
+    "tf-keras-vis",
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/your_username/PyAIStatus"
+"Bug Tracker" = "https://github.com/your_username/PyAIStatus/issues"
+
+[tool.setuptools.packages.find]
+where = ["PyAIStatus"]
