@@ -36,13 +36,21 @@ Built with **clarity**, **reproducibility**, and **rigor** in mind, PyAIStatus t
 ## Requirements
 
 -tensorflow>=2.9,<2.10
+
 -scikit-learn
+
 -pandas
+
 -matplotlib
+
 -seaborn
+
 -numpy<2.0
+
 -opencv-python-headless
+
 -tqdm
+
 -tf-keras-vis
 
 ## Usage - Quick Run (.py file/.ipynb file)
