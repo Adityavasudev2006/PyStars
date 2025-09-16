@@ -26,3 +26,17 @@ venv/
 
 # Logs
 *.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Packaging
+*.egg-info/
+build/
+dist/
+
+# Virtual env
+venv/
+.env/
