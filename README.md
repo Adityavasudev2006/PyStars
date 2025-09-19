@@ -85,6 +85,10 @@ else:
 
 ![Report Picture 1](pictures/report_pic_1.png)
 
+![Website Picture 1](pictures/website_pic_1.png)
+
+![Website Picture 2](pictures/website_pic_2.png)
+
 ![Report Picture 2](pictures/report_pic_2.png)
 
 ![Report Picture 3](pictures/report_pic_3.png)
