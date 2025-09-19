@@ -83,17 +83,20 @@ else:
 
 ## 🚀 Demo Pictures
 
-![Report Picture 1](pictures/report_pic_1.png)
+<p align="center">
+  <img src="pictures/report_pic_1.png" alt="Report Picture 1" width="45%">
+  <img src="pictures/website_pic_1.png" alt="Website Picture 1" width="45%">
+</p>
 
-![Website Picture 1](pictures/website_pic_1.png)
+<p align="center">
+  <img src="pictures/website_pic_2.png" alt="Website Picture 2" width="45%">
+  <img src="pictures/report_pic_2.png" alt="Report Picture 2" width="45%">
+</p>
 
-![Website Picture 2](pictures/website_pic_2.png)
-
-![Report Picture 2](pictures/report_pic_2.png)
-
-![Report Picture 3](pictures/report_pic_3.png)
-
-![Report Picture 4](pictures/report_pic_4.png)
+<p align="center">
+  <img src="pictures/report_pic_3.png" alt="Report Picture 3" width="45%">
+  <img src="pictures/report_pic_4.png" alt="Report Picture 4" width="45%">
+</p>
 
 ## 📜 License
 
