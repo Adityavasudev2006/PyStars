@@ -1,4 +1,4 @@
-![Logo](<https://busy-gray-uvq0w3r0fh.edgeone.app/PyAS-icon%20(5).png>)
+![Logo](pictures/logo.png)
 
 # 🚀 PyAIStatus
 
