@@ -60,7 +60,7 @@ Built with **clarity**, **reproducibility**, and **rigor** in mind, PyAIStatus t
 3.Example:
 
 ```bash
-  import os
+import os
 from PyAIStatus import evaluate
 
 #Defining Location
