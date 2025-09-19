@@ -87,6 +87,10 @@ else:
 
 ![Report Picture 2](pictures/report_pic_2.png)
 
+![Report Picture 3](pictures/report_pic_3.png)
+
+![Report Picture 4](pictures/report_pic_4.png)
+
 ## 📜 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
