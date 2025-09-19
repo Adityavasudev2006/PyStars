@@ -6,7 +6,7 @@ PyAIStatus is a **cutting-edge evaluation and reporting library** designed to st
 
 Built with **clarity**, **reproducibility**, and **rigor** in mind, PyAIStatus transforms the typically fragmented evaluation process into a **single-command solution** that delivers a comprehensive interactive report (`report.html`) 📊 packed with actionable insights.
 
-## Visit : http://whimsical-cocada-c981cb.netlify.app
+## Visit : https://phenomenal-capybara-d3e62c.netlify.app/
 
 ## ✨ Key Highlights
 
