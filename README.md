@@ -81,6 +81,12 @@ else:
     )
 ```
 
+## 🚀 Demo Pictures
+
+![Report Picture 1](pictures/report_pic_1.png)
+
+![Report Picture 2](pictures/report_pic_2.png)
+
 ## 📜 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
